@@ -9,7 +9,7 @@ const descriptionTextBox = document.getElementById("descriptionTextBox")
 const effortTextBox = document.getElementById("effortTextBox")
 const mountainImage = document.getElementById("mountainImage")
 const latAndLngTextbox = document.getElementById("latAndLngTextbox")
-const outputSunriseSunsetDiv = document.getElementById("outputSunriseSunsetDiv")
+const outputSunriseSunsetDiv = document.getElementById("latAndLngTextbox")
 
 
 
