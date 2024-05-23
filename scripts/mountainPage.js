@@ -10,6 +10,9 @@ const effortTextBox = document.getElementById("effortTextBox")
 const mountainImage = document.getElementById("mountainImage")
 const latAndLngTextbox = document.getElementById("latAndLngTextbox")
 const outputSunriseSunsetDiv = document.getElementById("latAndLngTextbox")
+const coordTextBox2 = document.getElementById("coordTextBox2")
+const coordTextBox = document.getElementById("coordTextBox")
+
 
 
 
@@ -40,6 +43,8 @@ function onDropdownChange(){
             elevationTextBox.innerHTML = mountain.elevation
             descriptionTextBox.innerHTML = mountain.desc
             effortTextBox.innerHTML = mountain.effort
+            coordTextBox.innerHTML = mountain.coords.lat
+            coordTextBox2.innerHTML = mountain.coords.lng
             mountainImage.src = `/images/${mountain.img}`;
         }
         

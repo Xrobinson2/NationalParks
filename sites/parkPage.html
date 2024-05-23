@@ -35,10 +35,7 @@
 
 
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                   
                 </div>
             </div>
         </nav>
@@ -84,11 +81,15 @@
 
             <div class="container border my-4" id="buttonContainer">
                 <div class="row">
-                    <div class="col-4 mx-auto">
+                    <div class="col-5 mx-auto">
 
                         <div class="row">
 
                             <div class="col-md-4 my-5 border w-100" >
+                               <div>
+                                     <p>Filter By Location</p>
+                                   <input type = "radio" id="locationRadio" name="filterRadio" class="fals" checked >
+                               </div>
                                 <select id="locationDropdown" class="form-select">
 
                                     <option value="">Select A Location</option>
@@ -99,35 +100,48 @@
 
 
                             </div>
-                            
-                               
-                            <div class="row">
-                                <div class="col-5 mx-auto">
-                                    <div id="outputDiv">
+                            <div class="col-md-4 my-5 border w-100" >
+                                <div>
+                                    <p>Filter By Park Type</p>
+                                  <input type = "radio" id="parkTypeRadio" name="filterRadio">
+                              </div>
+                                <select id="parkTypeDropdown" class="form-select" disabled >
 
-
-                                    </div>
-
+                                    <option value="0">Select Park Type</option>
                                     
-                                        
-                                </div>
+
+
+                                </select>
+
 
                             </div>
-
-
-
+                            
+                            
+                            
+                            
                         </div>
-
-
-
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+            
+            <div class="container">
+                <div class="row" id="cardRow">
+                    <div class="col-7 mx-auto mb-5">
+                        <div id="outputDiv">
+       
+                        
+                            
                     </div>
 
                 </div>
-
             </div>
-
-
-
 
 
         </div>
