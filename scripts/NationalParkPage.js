@@ -47,9 +47,11 @@ function showLocationDataOnChange(){
     for(let nationalPark of nationalParksArray){
         console.log(locationDropdown.value)
         if(nationalPark.State == locationDropdown.value){
-            let address = `${nationalPark.City}, ${nationalPark.State}`
+            let locationID = `${nationalPark.LocationID}`
+            let address = `${nationalPark.City}, ${nationalPark.State}, ${nationalPark.Address}`
             let contact = `${nationalPark.Phone}`
-            outputDiv.appendChild(generateCard(nationalPark.LocationName, address, contact))
+            let fax = `${nationalPark.Fax}`
+            outputDiv.appendChild(generateCard(nationalPark.LocationName, address, contact, fax, locationID))
             console.log("state")
         }
         
@@ -62,9 +64,11 @@ function showParkTypeDataOnChange(){
     for(let nationalPark of nationalParksArray){
         if(nationalPark.LocationName.includes(parkTypeDropdown.value) == true){
             //console.log("Hello Moto")
-            let address = `${nationalPark.City}, ${nationalPark.State},`
+            let locationID = `${nationalPark.LocationID}`
+            let address = `${nationalPark.City}, ${nationalPark.State}, ${nationalPark.Address}`
             let contact = `${nationalPark.Phone}`
-            outputDiv.appendChild(generateCard(nationalPark.LocationName, address, contact));
+            let fax = `${nationalPark.Fax}`
+            outputDiv.appendChild(generateCard(nationalPark.LocationName, address, contact, fax, locationID));
         };
     };
 };
@@ -94,14 +98,15 @@ function filterRadioBtn(){
     //     parkTypeDropdown == false
         
     // }
-    console.log("true or false")
+    //console.log("true or false")
 }
 
 
 
 // Card generated with Park info
 
-function generateCard (title, location, contact){
+function generateCard (title, location, contact, fax, locationID, address){
+    
     let parkListCard = document.createElement("div");
     parkListCard.classList.add("card", "parkcard");
 
@@ -115,15 +120,22 @@ function generateCard (title, location, contact){
 
     parkCardBody.appendChild(parkCardTitle);
 
- 
+    let parkCardBreak = document.createElement("hr");
+    parkCardBreak.classList.add("card-break");
+
+    parkCardBody.appendChild(parkCardBreak);
 
     let parkCardText = document.createElement("p");
     parkCardText.classList.add("card-text");
+    
 
     parkCardBody.appendChild(parkCardText);
 
     let parkCardLocation = document.createElement("p");
     parkCardLocation.classList.add("cardLocation");
+
+    let parkCardAddress = document.createElement("p");
+    parkCardAddress.classList.add("card-text");
 
     parkCardText.appendChild(parkCardLocation);
 
@@ -132,15 +144,29 @@ function generateCard (title, location, contact){
 
     parkCardBody.appendChild(parkCardContact);
 
+    let parkCardFax = document.createElement("p");
+    parkCardFax.classList.add("card-text");
+
+    parkCardBody.appendChild(parkCardFax);
+
+    let parkCardLocationID = document.createElement("p");
+    parkCardLocationID.classList.add("card-text");
+
+    parkCardBody.appendChild(parkCardLocationID);
+
 
     parkCardTitle.innerHTML = title;
 
     parkCardLocation.innerHTML = location;
 
     parkCardContact.innerHTML = contact
-        if(nationalParksArray.Phone == "0" ){
-            
-        }
+
+    parkCardFax.innerHTML = fax
+    
+    parkCardAddress.innerHTML = address
+
+    parkCardLocationID.innerHTML = locationID
+       
     return parkListCard;
 }
 

@@ -25,6 +25,7 @@ window.onload = () => {
 
 // becoming each object 
 function loadDropdownData(){
+    
     for(let mountain of mountainsArray ){
         let theOption = new Option(mountain.name, mountain.name)
         mountainDropdown.appendChild(theOption)
@@ -35,6 +36,7 @@ function loadDropdownData(){
 
 function onDropdownChange(){
    // console.log(mountainDropdown.value)
+   
     for(let mountain of mountainsArray){
         if(mountain.name == mountainDropdown.value){
          console.log("name")

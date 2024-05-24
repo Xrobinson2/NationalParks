@@ -10,7 +10,7 @@
     <link href="/css/index.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="nationalParkBody">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -44,21 +44,21 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col mb-5 mt-5">
 
                     <div id="carouselExampleAutoplaying" class="carousel slide picturefill-background"
                         data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/images/NationalHD.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/someBetterPark.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/NationalHD3.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/yosemitePARKK.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/NationalHD4.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/nationalPARRK.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
 
@@ -79,16 +79,17 @@
                 </div>
             </div>
 
-            <div class="container border my-4" id="buttonContainer">
-                <div class="row">
+            <div class="container" id="buttonContainer">
+                
                     <div class="col-5 mx-auto">
 
                         <div class="row">
 
-                            <div class="col-md-4 my-5 border w-100" >
+                            <div class="col-md-6 my-5 w-100" >
                                <div>
-                                     <p>Filter By Location</p>
-                                   <input type = "radio" id="locationRadio" name="filterRadio" class="fals" checked >
+                                     <h3>Filter By Location</h3>
+                                   <input type = "radio" id="locationRadio" name="filterRadio"  checked 
+                                   class="mb-4">
                                </div>
                                 <select id="locationDropdown" class="form-select">
 
@@ -100,10 +101,11 @@
 
 
                             </div>
-                            <div class="col-md-4 my-5 border w-100" >
+                            <hr id="radioBreak">
+                            <div class="col-md-6 my-5 w-100" >
                                 <div>
-                                    <p>Filter By Park Type</p>
-                                  <input type = "radio" id="parkTypeRadio" name="filterRadio">
+                                    <h3>Filter By Park Type</h3>
+                                  <input type = "radio" id="parkTypeRadio" name="filterRadio" class="mb-4">
                               </div>
                                 <select id="parkTypeDropdown" class="form-select" disabled >
 
@@ -115,8 +117,26 @@
 
 
                             </div>
+                            <div>
+
                             
-                            
+                            <div id="ParkLayoutBox">
+                                <div>
+                                <h3>Mountain Name</h3> 
+                             </div>
+                             <div>
+                                 <h3>Address</h3>
+                             </div>
+                             <div>
+                                 <h3>Phone Number</h3>
+                             </div>
+                             <div>
+                                 <h3>Fax Number</h3> 
+                             </div>
+                             <div>
+                                 <h3>Location ID</h3>
+                             </div>
+                            </div>
                             
                             
                         </div>
@@ -125,7 +145,7 @@
                         
                     </div>
                     
-                </div>
+                
                 
             </div>
             
@@ -133,7 +153,7 @@
             
             <div class="container">
                 <div class="row" id="cardRow">
-                    <div class="col-7 mx-auto mb-5">
+                    <div class="col-7 mx-auto mb-5 mt-4">
                         <div id="outputDiv">
        
                         
@@ -160,13 +180,13 @@
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
 
             <li class="nav-item">
-                <a href="/crafti-site/index.html" class="nav-link px-2 text-muted">Da Craft Spot</a>
+                <a href="/sites/parkPage.html" class="nav-link px-2 text-muted">National Parks</a>
             </li>
             <li class="nav-item">
-                <a href="/crafti-site/products.html" class="nav-link px-2 text-muted">Products</a>
+                <a href="/sites/moutainPage.html" class="nav-link px-2 text-muted">Mountains</a>
             </li>
             <li class="nav-item">
-                <a href="/crafti-site/login.html" class="nav-link px-2 text-muted">Login</a>
+                <a href="/sites/index.html" class="nav-link px-2 text-muted">X</a>
             </li>
 
         </ul>

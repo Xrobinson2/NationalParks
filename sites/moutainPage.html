@@ -10,7 +10,7 @@
     <link href="/css/index.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="mountainBody">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
@@ -35,10 +35,7 @@
 
 
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -47,21 +44,21 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col mb-5 mt-5">
 
                     <div id="carouselExampleAutoplaying" class="carousel slide picturefill-background"
                         data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/images/NationalHD.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/forest-mountains-3v-2048x2048.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/NationalHD3.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/mountainCaroussel.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
                             <div class="carousel-item">
-                                <img src="/images/NationalHD4.jpg" class="d-block w-100 object-fit-cover border rounded"
+                                <img src="/images/mountainCaroussel33.jpg" class="d-block w-100 object-fit-cover border rounded"
                                     height="600px" width="300px" alt="...">
                             </div>
 
@@ -82,60 +79,38 @@
                 </div>
             </div>
 
-            <div class="container border my-4" id="buttonContainer">
+            <div class="container border mb-5 my-4" id="showMountain">
                 <div class="row">
                     <div class="col-4 mx-auto">
 
                         <div class="row">
 
-                            <div class="col-md-4 my-5 border w-100" id="StateButton">
+                            <div class="col my-5 w-100 " id="selectMountainDropdown">
                                 <select id="mountainDropdown" class="form-select">
 
                                     <option value="">Select A Mountain</option>
-                                   
+
 
                                 </select>
 
+                                <div class=" mx-auto border mt-5" id="mountainLayoutBox">
                                 
-
-
-                            </div>
-                            <div class="row">
-                                <div class="col-8 mx-auto">
-
-                                   <div id="outputDiv">
-                                      <img id="mountainImage" src="" class="img"/>
-                                        <h2 id="nameTextBox" > 
-
-                                        </h3>
-                                        <p id="elevationTextBox" >
-
-                                        </h3>
-                                    </h3>
-                                    <p id="coordTextBox" ></p>
-                                    <p id="coordTextBox2" ></p>
-
-                                    </h3>
-                                        <p id="descriptionTextBox" >
-
-                                        </p>
-                                        <h4 id="effortTextBox" >
-
-                                        </h4>
-
-                                    </div>
-                                    <div id="outputSunriseSunsetDiv">
-                                        <h3 id="latAndLngTextbox">
-    
-                                        </h3>
-
-                                    </div>
+                                <div>
+                                   <h3>Mountain Name</h3> 
                                 </div>
-
-                          
-
+                                <div>
+                                    <h3>Elevation</h3>
+                                </div>
+                                <div>
+                                    <h3>Longitude & Latitude</h3>
+                                </div>
+                                <div>
+                                    <h3>Description</h3> 
+                                </div>
+                                <div>
+                                    <h3>Effort to climb</h3>
+                                </div>
                             </div>
-
 
 
 
@@ -143,19 +118,66 @@
 
 
 
+
+
+
                     </div>
+
+
 
                 </div>
 
             </div>
-            
+
+        </div>
+
+        <div id="container">
+
+            <div class="row">
+                <div class="col-5 mx-auto">
+                    <div id="outputDiv">
+                        <img id="mountainImage" src="" class="img mb-4" />
+                        <hr>
+                        <h2 id="nameTextBox">
+
+                            </h3>
+                            <p id="elevationTextBox">
+
+                                </h3>
+                                </h3>
+                            <p id="coordTextBox"></p>
+
+                            <p id="coordTextBox2"></p>
+
+                            </h3>
+                            <p id="descriptionTextBox">
+
+                            </p>
+                            <h4 id="effortTextBox">
+
+                            </h4>
+
+                    </div>
+                    <div id="outputSunriseSunsetDiv">
+                        <h3 id="latAndLngTextbox">
+
+                        </h3>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
 
 
 
 
 
         </div>
-       
+
 
 
     </main>
@@ -183,8 +205,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-<script src="/parkData/mountainData.js"></script>
-<script src="/scripts/mountainPage.js"></script>
+    <script src="/parkData/mountainData.js"></script>
+    <script src="/scripts/mountainPage.js"></script>
 
 </body>
 
